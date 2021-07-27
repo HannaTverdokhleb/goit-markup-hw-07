@@ -1,0 +1,23 @@
+.advantages {
+  padding-top: 94px;
+}
+.point-item {
+  flex: 0 0 270px;
+}
+.point-item:not(:last-child) {
+  margin-right: 30px;
+}
+.point-header {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.text {
+  color: var(--sub-text-color);
+  line-height: 1.7;
+}
+.point-value {
+  letter-spacing: 0.03rem;
+}
