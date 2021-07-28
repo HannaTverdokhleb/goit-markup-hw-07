@@ -21,7 +21,7 @@
 }
 .image-item {
   flex: 0 0 370px;
-}
-.image-item:not(:last-child) {
-  margin-right: 30px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }

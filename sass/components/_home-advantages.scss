@@ -3,10 +3,11 @@
 }
 .point-item {
   flex: 0 0 270px;
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }
-.point-item:not(:last-child) {
-  margin-right: 30px;
-}
+
 .point-header {
   font-size: 14px;
   line-height: 1.14;

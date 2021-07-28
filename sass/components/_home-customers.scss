@@ -19,12 +19,11 @@
   transition-property: border;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-}
-.customer-link:hover,
-.customer-link:focus {
-  border-color: var(--brand-color);
-}
-.customer-link:hover .brand-icon,
-.customer-link:focus .brand-icon {
-  fill: var(--brand-color);
+  &:hover,
+  &:focus {
+    border-color: var(--brand-color);
+    .brand-icon {
+      fill: var(--brand-color);
+    }
+  }
 }

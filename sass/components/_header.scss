@@ -6,24 +6,29 @@
   transition-property: color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    color: var(--brand-color);
+    opacity: 1;
+  }
 }
 .link {
   color: var(--sub-text-color);
+  display: flex;
+  align-items: center;
+  .link-svg {
+    margin-right: 10px;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  &:hover,
+  &:focus {
+    .link-svg {
+      fill: var(--brand-color);
+    }
+  }
 }
 .page-link {
   color: var(--main-text-color);
-}
-.link:focus,
-.link:hover,
-.page-link:hover,
-.page-link:focus,
-.footer-link:hover,
-.footer-link:focus {
-  color: var(--brand-color);
-  opacity: 1;
-}
-.logo span {
-  color: var(--brand-color);
 }
 .logo {
   font-family: var(--secondary-font);
@@ -31,6 +36,9 @@
   line-height: 1.19;
   font-weight: bold;
   letter-spacing: 0.03em;
+  span {
+    color: var(--brand-color);
+  }
 }
 .header {
   border-bottom: 1px solid var(--border-color);
@@ -43,33 +51,18 @@
 .active-page {
   color: var(--brand-color);
   position: relative;
+  &:after {
+    content: "";
+    background: var(--brand-color);
+    border-radius: 2px;
+    width: 100%;
+    height: 4px;
+    position: absolute;
+    display: block;
+    bottom: -32px;
+    left: 0;
+  }
 }
-.active-page::after {
-  content: "";
-  background: var(--brand-color);
-  border-radius: 2px;
-  width: 100%;
-  height: 4px;
-  position: absolute;
-  display: block;
-  bottom: -32px;
-  left: 0;
-}
-
-.link-svg {
-  margin-right: 10px;
-  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
-.link {
-  display: flex;
-  align-items: center;
-}
-
-.link:hover .link-svg,
-.link:focus .link-svg {
-  fill: var(--brand-color);
-}
-
 .svg-wrapper {
   display: flex;
   align-items: center;
@@ -79,7 +72,14 @@
   background: var(--light-background);
   border-radius: 4px;
 }
-.nav-row li:not(:last-child),
-.link-row li:not(:last-child) {
-  margin-right: 50px;
+.nav-row li {
+  &:not(:last-child),
+  &:not(:last-child) {
+    margin-right: 50px;
+  }
+}
+.link-item {
+  &:not(:last-child) {
+    margin-right: 30px;
+  }
 }

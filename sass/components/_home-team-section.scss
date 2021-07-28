@@ -19,13 +19,14 @@
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
-.social-icon-link:hover,
-.social-icon-link:focus {
-  background-color: var(--brand-color);
-}
-.social-icon-link:hover .social-icon,
-.social-icon-link:focus .social-icon {
-  fill: var(--white-color);
+.social-icon-link {
+  &:hover,
+  &:focus {
+    background-color: var(--brand-color);
+    .social-icon {
+      fill: var(--white-color);
+    }
+  }
 }
 .social-icon,
 .brand-icon {
